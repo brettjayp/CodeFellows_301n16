@@ -1,3 +1,5 @@
+# BRETT PACKARD'S PULL FROM SEATTLE_301N16 CLASS REPO
+Source for seattle_301n16 repo: https://github.com/codefellows/seattle-301n16.git
 # Code 301: Intermediate Software Development
 
 Feel free to open issues as a way to report bugs, recommend updates, and propose minor fixes.
