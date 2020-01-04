@@ -47,6 +47,7 @@ function displayPics(){
     allProducts[temp].views += 1;
   }
 }
+// a test
 
 function handleClick(event) {
   if (event.target.id === 'image_container') {
