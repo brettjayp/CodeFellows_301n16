@@ -6,7 +6,7 @@ const leftImage = document.getElementById('left');
 const centerImage = document.getElementById('center');
 const rightImage = document.getElementById('right');
 
-const allProducts = [];
+let allProducts = [];
 const container = document.getElementById('image_container');
 const viewed = [];
 const labels = [];
@@ -40,7 +40,7 @@ function displayPics(){
   // 'let' is block scoped, meaning that its scope can only traverse within its own block of code (to include child blocks). Since the variable 'rando' was declared inside of a block of code, and 'console.log(rando)' was called outside of that block, it was called outside of the scope in which is was declared..
   console.log(viewed);
 
-  for (const i = 0; i < 3; i++){
+  for (let i = 0; i < 3; i++){
     const temp = viewed.shift();
     pics[i].src = allProducts[temp].path;
     pics[i].id = allProducts[temp].name;
