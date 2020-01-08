@@ -22,19 +22,20 @@ Image.prototype.render = function () {
   imageTemplate.find('h2').text(this.title);
   imageTemplate.find('img').attr('src', this.url);
   imageTemplate.find('p').text(this.description);
+  imageTemplate.removeClass('template');
 };
 Image.prototype.loadImages = function () {
   Image.allImages.forEach(img => img.render());
 };
 
 Image.readJson = () => {
-  $.get('../data/page-1.json', 'json')
+  $.get('./data/page-1.json', 'json')
     .then(data => {
       data.forEach(item => {
         Image.allImages.push(new Image(item));
       });
     })
-    .then(() => console.log(Image.allImages));
+    .then(() => Image.allImages.forEach(img => img.render()))
 };
 
 
