@@ -7,9 +7,9 @@ Estimate of time needed to complete: Fourty Minutes
 
 Start time: 7:20pm
 
-Finish time: _____
+Finish time: 9:15pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1:55
 <!-- Template of time estimate format -->
 Number and name of feature: ________________________________
 
