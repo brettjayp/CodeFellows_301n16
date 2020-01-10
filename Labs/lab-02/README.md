@@ -26,9 +26,9 @@ Estimate of time needed to complete: One hour, ten minuts
 
 Start time: 6:40pm
 
-Finish time: _____
+Finish time: 9:15pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2:35
 
 <!-- Template of time estimate format -->
 Number and name of feature: ________________________________
