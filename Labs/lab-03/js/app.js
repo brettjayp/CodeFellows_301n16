@@ -14,23 +14,26 @@ Image.allImages = [];
 
 
 let keywords = [];
-Image.prototype.options = function() {
+Image.prototype.options = function () {
   Image.allImages.forEach(value => {
-    if(keywords.indexOf(value.keyword) > -1){
+    if (keywords.indexOf(value.keyword) > -1) {
     } else {
       keywords.push(value.keyword);
     };
   });
 
-  keywords.forEach(value => $('select').append(`<option id="option_${value}">${value}</option>`));
+  keywords.forEach(value => $('#filter').append(`<option id="option_${value}">${value}</option>`));
 
-  $('select').on('change', (event) => {
+  $('#filter').on('change', (event) => {
     console.log(event.target.value);
     let option = event.target.value;
-      $('div').hide();
-      $(`.${option}`).show();
-  })
+    $('div').hide();
+    $(`.${option}`).show();
+  });
 };
+Image.prototype.sort = function () {
+
+}
 
 Image.prototype.render = function () {
   $('main').append('<div class = "template"></div>');
@@ -60,8 +63,9 @@ Image.readJson = () => {
         Image.allImages.push(new Image(item));
       });
     })
+    .then(() => Image.allImages.sort((a, b) => a.horns - b.horns))
     .then(() => Image.allImages.forEach(img => img.render()))
-    .then(() => Image.allImages[19].options())
+    .then(() => Image.allImages[19].options());
 
 };
 
