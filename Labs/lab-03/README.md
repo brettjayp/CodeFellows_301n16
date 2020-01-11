@@ -1,15 +1,30 @@
 # LAB 02 301n16
 
-# Feature four
+# Feature One
+Number and name of feature: #1: Pagination
+
+Navigator: Henok
+
+Driver: Brett
+
+Estimate of time needed to complete: 1:00
+
+Start time: 3:15pm
+
+Finish time: 3:54pm
+
+Actual time needed to complete: 0:40
+
+# Feature Four
 Number and name of feature: #4: Sort
 
-Navigator: xx
+Navigator: Brett
 
-Driver: xx
+Driver: Henok
 
 Estimate of time needed to complete: 1:30
 
-Start time: 1:15
+Start time: 1:15pm
 
 Finish time: 3:08pm
 

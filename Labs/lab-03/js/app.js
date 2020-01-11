@@ -12,7 +12,7 @@ Image.allImages = [];
 let keywords = [];
 const imageHtml = $('#photo-template').html();
 
-Image.prototype.options = function () {
+Image.options = function () {
   Image.allImages.forEach(value => {
     if (keywords.indexOf(value.keyword) > -1) {
       return value.keyword;
@@ -22,23 +22,27 @@ Image.prototype.options = function () {
   });
 
   keywords.forEach(value => $('#filter').append(`<option id="option_${value}">${value}</option>`));
-  $('#sort').append('<option id = "horns">horns</option>');
-  $('#sort').append('<option id = "title">title</option>');
-
+  
   $('#filter').on('change', (event) => {
     console.log(event.target.value);
     let option = event.target.value;
     $('div').hide();
     $(`.${option}`).show();
   });
+};
+
+Image.sorting = function () {  
+  $('#sort').append('<option id = "horns">horns</option>');
+  $('#sort').append('<option id = "title">title</option>');
+
   $('#sort').on('change', (event) => {
-    order(event.target.value);
+    Image.order(event.target.value);
     $('main').empty();
     Image.allImages.forEach(img => img.render());
   });
-};
+}
 
-const order = function (order) {
+Image.order = function (order) {
   if (order === 'horns') {
     Image.allImages.sort((a, b) => a.horns - b.horns);
   } else if (order === 'title') {
@@ -68,17 +72,32 @@ Image.prototype.render = function () {
   imageTemplate.addClass('objects');
 };
 
-Image.readJson = () => {
-  $.get('./data/page-1.json', 'json')
+Image.readJson = (src) => {
+  $.get(src, 'json')
     .then(data => {
       data.forEach(item => {
         Image.allImages.push(new Image(item));
       });
     })
     .then(() => Image.allImages.forEach(img => img.render()))
-    .then(() => Image.allImages[19].options());
+    .then(() => Image.options())
+    .then(() => Image.sorting());
 };
 
-$(Image.readJson());
+$(Image.readJson('./data/page-1.json'));
+
+$('#page').append('<option id="1">1</option>');
+$('#page').append('<option id="2">2</option>');
+
+$('#page').on('change', (event) => {
+  let page = event.target.value;
+  if(page != 'default'){
+    $('main').empty();
+    $('#filter').empty();
+    $('#sort').empty();
+    Image.allImages = [];
+    $(Image.readJson(`./data/page-${page}.json`));
+  }
+})
 
 
