@@ -11,9 +11,9 @@ Estimate of time needed to complete: 1:30
 
 Start time: 1:15
 
-Finish time: _____
+Finish time: 3:08pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1:50
 
 <!-- Template of time estimate format -->
 Number and name of feature: ________________________________
