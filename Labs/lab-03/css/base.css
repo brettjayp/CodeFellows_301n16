@@ -1,0 +1,27 @@
+body {
+  width: 960px;
+  margin: 0px auto;
+}
+
+.title {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+img {
+  height: 50%;
+  width: auto;
+  max-width: 100%;
+}
+
+.description {
+  font-family: 'PT Serif', serif;
+}
+
+.objects {
+  float: left;
+  /* overflow: scroll; */
+  text-align: center;
+  border: 2px solid black;
+  width: 235px;
+  height: 400px;
+}
