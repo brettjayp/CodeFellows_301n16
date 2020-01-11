@@ -31,8 +31,11 @@ Image.prototype.options = function () {
     $(`.${option}`).show();
   });
 };
-Image.prototype.sort = function () {
+Image.prototype.sort = function (sortBy) {
+  if (sortBy === 'title') {
+    Image.allImages.sort((a, b) => a.title.length - b.title.length);
 
+  }
 }
 
 Image.prototype.render = function () {
