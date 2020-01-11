@@ -1,0 +1,19 @@
+.title {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+img {
+  height: 80%;
+  width: 80%;
+}
+
+.description {
+  font-family: 'PT Serif', serif;
+}
+
+.objects {
+  text-align: center;
+  border: 2px solid black;
+  width: 22.5%;
+  height: 30%;
+}

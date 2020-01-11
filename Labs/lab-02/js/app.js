@@ -39,10 +39,13 @@ Image.prototype.render = function () {
   imageTemplate.html(imageHtml);
 
   imageTemplate.find('h2').text(this.title);
+  imageTemplate.find('h2').addClass('title');
   imageTemplate.find('img').attr('src', this.url);
   imageTemplate.find('p').text(this.description);
+  imageTemplate.find('p').addClass('description');
   imageTemplate.removeClass('template');
-  imageTemplate.attr('class', this.keyword);
+  imageTemplate.addClass(this.keyword);
+  imageTemplate.addClass('objects');
 };
 
 Image.prototype.loadImages = function () {
