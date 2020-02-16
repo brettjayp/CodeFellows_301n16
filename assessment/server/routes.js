@@ -32,10 +32,13 @@ function fetchCharactersFromSWAPI(pageNumber) {
       // After we get the data from the remote API, go to the
       // Database and add the number of "likes" for each character
       // from our database, if there are any
-      return getNumberOfLikes(response.body)
+      response.body.results.forEach(result => {
+        console.log(result.name, result.url);
+      });
+      return getNumberOfLikes(response.body);
     })
     .catch(error => { throw error; });
-}
+};
 
 
 // For each individual in the list of results, see if they

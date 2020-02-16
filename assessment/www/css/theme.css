@@ -1,0 +1,33 @@
+html, body {
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  /* star wars ish starry sky photo found at https://unsplash.com/photos/Q_RBVFFXR_g */
+}
+
+.characters {
+  width: auto;
+}
+
+.character {
+  background: #333;
+  color: #ffe81f;
+  box-shadow: 0 10px 6px -6px #777;
+  margin: 1em;
+  width: 250px;
+}
+
+.character header {
+  background: #000;
+  color: #ffe81f;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.character button {
+  background-color: #000;
+  color: #ffe81f;
+  border-color: #000;
+}
